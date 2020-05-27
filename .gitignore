@@ -1,0 +1,14 @@
+*.bin
+*.hex
+*.elf
+*.lst
+*.map
+*.bin*
+ble-rgb-control.cpp
+*.ipch
+*.dfu
+*.o
+*.d
+*.cpp
+
+.vscode
