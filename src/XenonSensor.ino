@@ -36,7 +36,6 @@ system_tick_t batteryLastMeasurementMs = 0;
 system_tick_t sensorLastMeasurementMs = 0;
 
 // Variables for keeping state
-float voltage;
 int sensorPin = A5;
 
 void batteryProcess()
@@ -86,14 +85,14 @@ void getSensorData()
   {
     sensorLastMeasurementMs = millis();
 
-    voltage = analogRead(sensorPin) * 0.0008;
-    String x = String(voltage);
+    float voltage = (int)(analogRead(sensorPin) * 0.0008 * 100 + 0.5);
+    //String x = String(voltage);
 
     // Set the sensor value
-    sensorVoltageCharacteristic.setValue(x);
+    sensorVoltageCharacteristic.setValue((float)voltage / 100);
 
     // Print the results
-    Log.info("Sensor voltage level: " + x);
+    //Log.info("Sensor voltage level: " + ((float)voltage/100));
   }
 }
 
