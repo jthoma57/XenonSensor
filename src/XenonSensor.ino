@@ -12,7 +12,7 @@ SerialLogHandler logHandler(115200, LOG_LEVEL_ERROR, {{"app", LOG_LEVEL_ALL}});
 #define MAX_BATT_V 4.1
 #define MIN_BATT_V 3.1
 #define BATTERY_INTERVAL_MS 10000
-#define SENSOR_INTERVAL_MS 2000
+#define SENSOR_INTERVAL_MS 500
 
 // UUID for battery service
 BleUuid batteryServiceUUID = BleUuid(0x180F);

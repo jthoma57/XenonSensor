@@ -10,5 +10,6 @@ ble-rgb-control.cpp
 *.o
 *.d
 *.cpp
+*.DS_Store
 
 .vscode
